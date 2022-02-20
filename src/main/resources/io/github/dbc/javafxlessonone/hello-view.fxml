@@ -12,16 +12,24 @@
    </padding>
    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0">
       <Label text="Stage Modality Options"/>
-      <Button fx:id="modalityNoneButton" mnemonicParsing="false" text="Modality.NONE"/>
-      <Button fx:id="applicationModalButton" mnemonicParsing="false" text="Modality.APPLICATION_MODAL"/>
-      <Button fx:id="windowModalButton" mnemonicParsing="false" text="Modality.WINDOW_MODAL"/>
+      <Button fx:id="modalityNoneButton" mnemonicParsing="false" onAction="#onModalityNoneButtonClick"
+              text="Modality.NONE"/>
+      <Button fx:id="applicationModalButton" mnemonicParsing="false" onAction="#onApplicationModalButtonClick"
+              text="Modality.APPLICATION_MODAL"/>
+      <Button fx:id="windowModalButton" mnemonicParsing="false" onAction="#onWindowModalButtonClick"
+              text="Modality.WINDOW_MODAL"/>
    </HBox>
    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0">
       <Label text="Stage Styles"/>
-      <Button fx:id="stageStyleDecoratedButton" mnemonicParsing="false" text="StageStyle.DECORATED"/>
-      <Button fx:id="stageStyleUndecoratedButton" mnemonicParsing="false" text="StageStyle.UNDECORATED"/>
-      <Button fx:id="stageStyleTransparentButton" mnemonicParsing="false" text="StageStyle.TRANSPARENT"/>
-      <Button fx:id="stageStyleUtilityButton" mnemonicParsing="false" text="StageStyle.UTILITY"/>
-      <Button fx:id="stageStyleUnifiedButton" mnemonicParsing="false" text="StageStyle.UNIFIED"/>
+      <Button fx:id="stageStyleDecoratedButton" mnemonicParsing="false" onAction="#onStageStyleDecoratedButtonClick"
+              text="StageStyle.DECORATED"/>
+      <Button fx:id="stageStyleUndecoratedButton" mnemonicParsing="false" onAction="#onStageStyleUndecoratedButtonClick"
+              text="StageStyle.UNDECORATED"/>
+      <Button fx:id="stageStyleTransparentButton" mnemonicParsing="false" onAction="#onStageStyleTransparentButtonClick"
+              text="StageStyle.TRANSPARENT"/>
+      <Button fx:id="stageStyleUtilityButton" mnemonicParsing="false" onAction="#onStageStyleUtilityButtonClick"
+              text="StageStyle.UTILITY"/>
+      <Button fx:id="stageStyleUnifiedButton" mnemonicParsing="false" onAction="#onStageStyleUnifiedButtonClick"
+              text="StageStyle.UNIFIED"/>
    </HBox>
 </VBox>
