@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+      minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="16.0"
+      xmlns="http://javafx.com/javafx/16">
+   <padding>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+   </padding>
+   <Label text="This time the previous window is not accessible!"/>
+</VBox>

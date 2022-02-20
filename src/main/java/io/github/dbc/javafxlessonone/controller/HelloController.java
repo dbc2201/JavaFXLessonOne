@@ -1,6 +1,8 @@
 package io.github.dbc.javafxlessonone.controller;
 
+import io.github.dbc.javafxlessonone.HelloApplication;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -8,6 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class HelloController {
 
@@ -61,8 +65,27 @@ public class HelloController {
     }
 
     @FXML
-    public void onApplicationModalButtonClick() {
+    public void onApplicationModalButtonClick() throws IOException {
+        // create a new stage
+        Stage applicationModalStage = new Stage();
 
+        // set the modality of the stage to APPLICATION_MODAL
+        applicationModalStage.initModality(Modality.APPLICATION_MODAL);
+
+        // load the view file to set on the stage instead of dynamically creating the node objects
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("application-modal-view.fxml"));
+
+        // create a new scene for the stage, set the width and the height for the 400.0
+        Scene scene = new Scene(fxmlLoader.load(), 400.0, 400.0);
+
+        // set the title for the stage
+        applicationModalStage.setTitle("Stage with Modality APPLICATION MODAL");
+
+        // add the scene to the stage
+        applicationModalStage.setScene(scene);
+
+        // show the stage
+        applicationModalStage.show();
     }
 
     @FXML
