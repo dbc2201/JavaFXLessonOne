@@ -1,6 +1,7 @@
 package io.github.dbc.javafxlessonone.controller;
 
 import io.github.dbc.javafxlessonone.HelloApplication;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
@@ -124,7 +125,7 @@ public class HelloController {
 
     @FXML
     public void onStageStyleDecoratedButtonClick() throws IOException {
-        //create a new stage
+        // create a new stage
         Stage stage = new Stage(StageStyle.DECORATED);
 
         // load the view file to set on the stage instead of dynamically creating the node objects
@@ -144,23 +145,107 @@ public class HelloController {
     }
 
     @FXML
-    public void onStageStyleUndecoratedButtonClick() {
+    public void onStageStyleUndecoratedButtonClick() throws IOException {
+        // create a new stage
+        Stage stage = new Stage(StageStyle.UNDECORATED);
 
+        // load the view file to set on the stage instead of dynamically creating the node objects
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("undecorated-stage-view.fxml"));
+
+        // create a new scene for the stage, set the width and the height for the 400.0
+        Scene scene = new Scene(fxmlLoader.load(), 400.0, 400.0);
+
+        // set the title for the stage
+        stage.setTitle("Stage with Stage Style UNDECORATED");
+
+        // add the scene to the stage
+        stage.setScene(scene);
+
+        // show the stage
+        stage.show();
+
+        Platform.runLater(() -> {
+            try {
+                Thread.sleep(4000L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                stage.close();
+            }
+        });
     }
 
     @FXML
     public void onStageStyleTransparentButtonClick() {
+        // create a new stage
+        Stage stage = new Stage(StageStyle.TRANSPARENT);
 
+        // create a simple container
+        VBox container = new VBox();
+
+        // create a new scene for the stage, set the width and the height for the 400.0
+        Scene scene = new Scene(container, 400.0, 400.0);
+
+        // set the title for the stage
+        stage.setTitle("Stage with Stage Style TRANSPARENT");
+
+        // add the scene to the stage
+        stage.setScene(scene);
+
+        // show the stage
+        stage.show();
+
+        Platform.runLater(() -> {
+            try {
+                Thread.sleep(4000L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } finally {
+                stage.close();
+            }
+        });
     }
 
     @FXML
-    public void onStageStyleUtilityButtonClick() {
+    public void onStageStyleUtilityButtonClick() throws IOException {
+        // create a new stage
+        Stage stage = new Stage(StageStyle.UTILITY);
 
+        // load the view file to set on the stage instead of dynamically creating the node objects
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("utility-stage-view.fxml"));
+
+        // create a new scene for the stage, set the width and the height for the 400.0
+        Scene scene = new Scene(fxmlLoader.load(), 400.0, 400.0);
+
+        // set the title for the stage
+        stage.setTitle("Stage with Stage Style UTILITY");
+
+        // add the scene to the stage
+        stage.setScene(scene);
+
+        // show the stage
+        stage.show();
     }
 
     @FXML
-    public void onStageStyleUnifiedButtonClick() {
+    public void onStageStyleUnifiedButtonClick() throws IOException {
+        // create a new stage
+        Stage stage = new Stage(StageStyle.UNIFIED);
 
+        // load the view file to set on the stage instead of dynamically creating the node objects
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("unified-stage-view.fxml"));
+
+        // create a new scene for the stage, set the width and the height for the 400.0
+        Scene scene = new Scene(fxmlLoader.load(), 400.0, 400.0);
+
+        // set the title for the stage
+        stage.setTitle("Stage with Stage Style UNIFIED");
+
+        // add the scene to the stage
+        stage.setScene(scene);
+
+        // show the stage
+        stage.show();
     }
 
 }
