@@ -89,8 +89,36 @@ public class HelloController {
     }
 
     @FXML
-    public void onWindowModalButtonClick() {
+    public void createEmptyStage() {
+        Stage stage = new Stage();
+        stage.setTitle("EMPTY WINDOW AFTER WINDOW MODAL");
+        stage.show();
+    }
 
+    @FXML
+    public void onWindowModalButtonClick() throws IOException {
+        // create a new stage
+        Stage applicationModalStage = new Stage();
+
+        // set the modality of the stage to WINDOW MODAL
+        applicationModalStage.initModality(Modality.WINDOW_MODAL);
+
+        // load the view file to set on the stage instead of dynamically creating the node objects
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("window-modal-view.fxml"));
+
+        // create a new scene for the stage, set the width and the height for the 400.0
+        Scene scene = new Scene(fxmlLoader.load(), 400.0, 400.0);
+
+        // set the title for the stage
+        applicationModalStage.setTitle("Stage with Modality WINDOW MODAL");
+
+        // TODO: 21-02-2022 fix owner null issue; modality resets to NONE
+
+        // add the scene to the stage
+        applicationModalStage.setScene(scene);
+
+        // show the stage
+        applicationModalStage.show();
     }
 
     @FXML
