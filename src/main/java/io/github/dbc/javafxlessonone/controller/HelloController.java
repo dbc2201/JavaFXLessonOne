@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -122,8 +123,24 @@ public class HelloController {
     }
 
     @FXML
-    public void onStageStyleDecoratedButtonClick() {
+    public void onStageStyleDecoratedButtonClick() throws IOException {
+        //create a new stage
+        Stage stage = new Stage(StageStyle.DECORATED);
 
+        // load the view file to set on the stage instead of dynamically creating the node objects
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("decorated-stage-view.fxml"));
+
+        // create a new scene for the stage, set the width and the height for the 400.0
+        Scene scene = new Scene(fxmlLoader.load(), 400.0, 400.0);
+
+        // set the title for the stage
+        stage.setTitle("Stage with Stage Style DECORATED");
+
+        // add the scene to the stage
+        stage.setScene(scene);
+
+        // show the stage
+        stage.show();
     }
 
     @FXML
