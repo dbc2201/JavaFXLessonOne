@@ -1,25 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<VBox alignment="CENTER" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.github.dbc.javafxlessonone.controller.HelloController">
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" minHeight="500.0" minWidth="500.0" prefHeight="500.0"
+      prefWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/16"
+      fx:controller="io.github.dbc.javafxlessonone.controller.HelloController">
    <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
    </padding>
    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0">
-      <Label text="Stage Modality Options" />
-      <Button fx:id="modalityNoneButton" mnemonicParsing="false" onAction="#onModalityNoneButtonClick" text="Modality.NONE" />
-      <Button fx:id="applicationModalButton" mnemonicParsing="false" onAction="#onApplicationModalButtonClick" text="Modality.APPLICATION_MODAL" />
-      <Button fx:id="windowModalButton" mnemonicParsing="false" onAction="#onWindowModalButtonClick" text="Modality.WINDOW_MODAL" />
+      <Label text="Stage Modality Options"/>
+      <Button fx:id="modalityNoneButton" mnemonicParsing="false" onAction="#onModalityNoneButtonClick"
+              text="Modality.NONE"/>
+      <Button fx:id="applicationModalButton" mnemonicParsing="false" onAction="#onApplicationModalButtonClick"
+              text="Modality.APPLICATION_MODAL"/>
+      <Button fx:id="windowModalButton" mnemonicParsing="false" onAction="#onWindowModalButtonClick"
+              text="Modality.WINDOW_MODAL"/>
    </HBox>
    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0">
-      <Label text="Stage Styles" />
-      <Button fx:id="stageStyleDecoratedButton" mnemonicParsing="false" onAction="#onStageStyleDecoratedButtonClick" text="StageStyle.DECORATED" />
-      <Button fx:id="stageStyleUndecoratedButton" mnemonicParsing="false" onAction="#onStageStyleUndecoratedButtonClick" text="StageStyle.UNDECORATED" />
-      <Button fx:id="stageStyleTransparentButton" mnemonicParsing="false" onAction="#onStageStyleTransparentButtonClick" text="StageStyle.TRANSPARENT" />
-      <Button fx:id="stageStyleUtilityButton" mnemonicParsing="false" onAction="#onStageStyleUtilityButtonClick" text="StageStyle.UTILITY" />
-      <Button fx:id="stageStyleUnifiedButton" mnemonicParsing="false" onAction="#onStageStyleUnifiedButtonClick" text="StageStyle.UNIFIED" />
+      <Label text="Stage Styles"/>
+      <Button fx:id="stageStyleDecoratedButton" mnemonicParsing="false" onAction="#onStageStyleDecoratedButtonClick"
+              text="StageStyle.DECORATED"/>
+      <Button fx:id="stageStyleUndecoratedButton" mnemonicParsing="false" onAction="#onStageStyleUndecoratedButtonClick"
+              text="StageStyle.UNDECORATED"/>
+      <Button fx:id="stageStyleTransparentButton" mnemonicParsing="false" onAction="#onStageStyleTransparentButtonClick"
+              text="StageStyle.TRANSPARENT"/>
+      <Button fx:id="stageStyleUtilityButton" mnemonicParsing="false" onAction="#onStageStyleUtilityButtonClick"
+              text="StageStyle.UTILITY"/>
+      <Button fx:id="stageStyleUnifiedButton" mnemonicParsing="false" onAction="#onStageStyleUnifiedButtonClick"
+              text="StageStyle.UNIFIED"/>
    </HBox>
 </VBox>
