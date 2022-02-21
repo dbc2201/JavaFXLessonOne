@@ -5,10 +5,12 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -149,11 +151,17 @@ public class HelloController {
         // create a new stage
         Stage stage = new Stage(StageStyle.UNDECORATED);
 
-        // load the view file to set on the stage instead of dynamically creating the node objects
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("undecorated-stage-view.fxml"));
+        // create a group as root
+        Group root = new Group();
+
+        // create a label to show the text
+        Label label = new Label("This is an undecorated stage(window), will auto close in 4 seconds");
+
+        // add the label to the root (group)
+        root.getChildren().add(label);
 
         // create a new scene for the stage, set the width and the height for the 400.0
-        Scene scene = new Scene(fxmlLoader.load(), 400.0, 400.0);
+        Scene scene = new Scene(root, 400.0, 400.0, Color.BISQUE);
 
         // set the title for the stage
         stage.setTitle("Stage with Stage Style UNDECORATED");
@@ -163,7 +171,6 @@ public class HelloController {
 
         // show the stage
         stage.show();
-
         Platform.runLater(() -> {
             try {
                 Thread.sleep(4000L);
