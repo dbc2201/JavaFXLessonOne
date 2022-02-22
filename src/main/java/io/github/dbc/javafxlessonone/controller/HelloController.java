@@ -165,7 +165,7 @@ public class HelloController {
      * Create a new stage with the StageStyle.UNDECORATED
      */
     @FXML
-    public void onStageStyleUndecoratedButtonClick() throws IOException {
+    public void onStageStyleUndecoratedButtonClick() {
         // create a new stage
         Stage stage = new Stage(StageStyle.UNDECORATED);
 
