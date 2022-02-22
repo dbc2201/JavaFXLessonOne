@@ -36,6 +36,9 @@ public class HelloController {
     @FXML
     public Button stageStyleUnifiedButton;
 
+    /**
+     * Create a new stage (window) with Modality.NONE
+     */
     @FXML
     public void onModalityNoneButtonClick() {
         // create a new stage (window) to show when the button is clicked
@@ -68,6 +71,9 @@ public class HelloController {
         modalityNoneStage.show();
     }
 
+    /**
+     * Create a new stage with modality APPLICATION_MODAL
+     */
     @FXML
     public void onApplicationModalButtonClick() throws IOException {
         // create a new stage
@@ -92,6 +98,9 @@ public class HelloController {
         applicationModalStage.show();
     }
 
+    /**
+     * Creates a new stage and shows it
+     */
     @FXML
     public void createEmptyStage() {
         Stage stage = new Stage();
@@ -99,6 +108,9 @@ public class HelloController {
         stage.show();
     }
 
+    /**
+     * Create a new stage with the modality set to WINDOW MODAL
+     */
     @FXML
     public void onWindowModalButtonClick() throws IOException {
         // create a new stage
@@ -125,6 +137,9 @@ public class HelloController {
         applicationModalStage.show();
     }
 
+    /**
+     * Create a new stage with the StageStyle.DECORATED
+     */
     @FXML
     public void onStageStyleDecoratedButtonClick() throws IOException {
         // create a new stage
@@ -146,6 +161,9 @@ public class HelloController {
         stage.show();
     }
 
+    /**
+     * Create a new stage with the StageStyle.UNDECORATED
+     */
     @FXML
     public void onStageStyleUndecoratedButtonClick() throws IOException {
         // create a new stage
@@ -182,6 +200,9 @@ public class HelloController {
         });
     }
 
+    /**
+     * Create a new stage with the StageStyle.TRANSPARENT
+     */
     @FXML
     public void onStageStyleTransparentButtonClick() {
         // create a new stage
@@ -213,6 +234,9 @@ public class HelloController {
         });
     }
 
+    /**
+     * Create a new stage with the StageStyle.UTILITY style
+     */
     @FXML
     public void onStageStyleUtilityButtonClick() throws IOException {
         // create a new stage
@@ -234,6 +258,9 @@ public class HelloController {
         stage.show();
     }
 
+    /**
+     * Create a new stage with the StageStyle.UNIFIED style
+     */
     @FXML
     public void onStageStyleUnifiedButtonClick() throws IOException {
         // create a new stage
